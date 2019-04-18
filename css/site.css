@@ -1,0 +1,5 @@
+/*Span that are children of main*/
+main > span[class=required]{
+    color: red;
+    font-style: italic;
+}
