@@ -24,6 +24,13 @@ function getStudent() {
 function displayStudent(stu) {
     var studentLI = document.createElement("li");
     studentLI.innerText = stu.firstName + " " + stu.lastName;
+    studentLI.onclick = function () {
+        var agree = confirm("Are you sure you want to delete?");
+        if (agree) {
+            var currItem = this;
+            currItem.remove();
+        }
+    };
     var list = document.querySelector("#roster > ul");
     list.appendChild(studentLI);
 }
