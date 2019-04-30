@@ -1,4 +1,5 @@
 
+// Student Class:
 class Student{
     firstName:string;
     lastName:string;
@@ -6,6 +7,8 @@ class Student{
 }
 
 //Test code ( Student Object)
+// Create a New Instance or Creating an object
+// Instantiate an object
 let testStu:Student = new Student();
 testStu.firstName = "Jose";
 testStu.lastName = "Salgado";
@@ -23,6 +26,9 @@ function registerStudent(){
 }
 
 // Retrieve all information off of form:
+/**
+ * Gets user input from the form  and wraps it in a student object.
+ */
 function getStudent():Student{
     let s = new Student();
     // let fname =                        can  also do this instead of let s.firstName.
