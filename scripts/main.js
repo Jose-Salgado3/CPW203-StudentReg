@@ -22,5 +22,8 @@ function getStudent() {
     return s;
 }
 function displayStudent(stu) {
-    alert(stu.firstName + " " + stu.lastName);
+    var studentLI = document.createElement("li");
+    studentLI.innerText = stu.firstName + " " + stu.lastName;
+    var list = document.querySelector("#roster > ul");
+    list.appendChild(studentLI);
 }

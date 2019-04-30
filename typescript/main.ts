@@ -1,5 +1,8 @@
 
 // Student Class:
+/**
+ * Represents a CPTC student
+ */
 class Student{
     firstName:string;
     lastName:string;
@@ -38,6 +41,15 @@ function getStudent():Student{
     return s;
 }
 
+// Find out how to make a list and add them to an unorder list we added to HTML
 function displayStudent(stu:Student){
-    alert(stu.firstName + " " + stu.lastName);
+    //<li></li>
+    let studentLI:HTMLLIElement = document.createElement("li");
+    //<li>J. Doe</li>
+    studentLI.innerText = stu.firstName + " " + stu.lastName;
+
+    // Getting <ul> and appending the new <li>
+    let list = document.querySelector("#roster > ul");
+
+    list.appendChild(studentLI);
 }
