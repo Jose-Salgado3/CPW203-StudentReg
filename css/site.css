@@ -3,3 +3,45 @@ main > span[class=required]{
     color: red;
     font-style: italic;
 }
+
+header {
+    text-align: center;
+    background-color: rgb(126, 13, 126);
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    border: .2em solid darkgreen;
+    /*margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1.5em;*/
+    margin: 0px 0px 1.5em;
+}
+main{
+    margin-left: 5%;
+}
+main > label {
+    margin-right: 2em;
+    text-align:right;
+    width: 12%;
+    display: inline-block;
+
+}
+main > input[type=text]{
+    padding: .4em;
+    border-radius: .5em;
+}
+main > button {
+    cursor: pointer;
+}
+body{
+    margin:.75em 10%;
+}
+/*Apply changes when on a phone only*/
+@media only screen and (max-width: 600px){
+    body{
+        margin: 0px 3%;
+    }
+    
+    header{
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
