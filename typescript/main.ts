@@ -24,9 +24,40 @@ window.onload = function(){
 }
 
 function registerStudent(){
+    if(isValid()){
     let nextStudent:Student = getStudent();
     displayStudent(nextStudent);
+    }
 }
+
+function isValid(){
+    //Validate all required elements( grabs all req elem data req )
+    let reqElems = document.querySelectorAll("main > input[data-required]")        //gets all inputs that are children of main and have data required
+    
+    let valid = true;
+
+    // looping thru them
+    for (let i = 0; i < reqElems.length; i++){
+        let currInput = <HTMLInputElement>reqElems[i];
+        // for each input were checking if the value is not empty space ( trim eliminates empty space)
+        if(currInput.value.trim() == ""){
+            //disp err msg
+            //grab next elem sibling(span)
+            let span = currInput.nextElementSibling;
+            //grab err msg from span that we found
+            let msg = span.getAttribute("data-msg");
+            //put message back into inner HTML
+            span.innerHTML = msg;
+            valid = false;
+
+        }
+    }
+    return valid;
+}
+    //foreach element
+        // check if input is empty
+        // if true, display err in span and set boolean flag
+
 
 // Retrieve all information off of form:
 /**
